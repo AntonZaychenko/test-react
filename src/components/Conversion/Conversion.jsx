@@ -48,17 +48,14 @@ export const Conversion = () => {
 										type="number"
 										className={s.form_control}							
 										autoFocus
-                                        onChange={e => Change(usd, eur)}
-                                        
+                                        onChange={e => Change(usd, eur)}										                                        
 									/>
 								</div>
 								<div className={s.col}>
 									<input
 										id="result"
 										type="number"
-										className={s.form_control}
-                                        defaultValue={0}
-																				
+										className={s.form_control}                                        																				
 									/>
 							</div>
 						</div>
