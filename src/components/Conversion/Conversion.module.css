@@ -1,0 +1,38 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+  
+}
+.form_control {
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid gray;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+}
+.content {
+   
+   width: 480px;
+   margin: 0 auto;
+   border: 1px solid gray;
+   border-radius: 7px;
+   padding: 1rem!important;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
