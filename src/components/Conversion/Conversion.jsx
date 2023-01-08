@@ -48,6 +48,7 @@ export const Conversion = () => {
 										type="number"
 										className={s.form_control}							
 										autoFocus
+									
                                         onChange={e => Change(usd, eur)}										                                        
 									/>
 								</div>
@@ -55,6 +56,7 @@ export const Conversion = () => {
 									<input
 										id="result"
 										type="number"
+										disabled
 										className={s.form_control}                                        																				
 									/>
 							</div>

@@ -11,20 +11,23 @@ export const Header = () => {
           .catch(error => console.log(error.message));
       }, []);
 
+      let time = new Date()
+      let now = time.toLocaleDateString('en-US')
+      console.log(now)
       const usd = exchangeRates.find(option => option.cc === 'USD')
       const eur = exchangeRates.find(option => option.cc === 'EUR')
         return(
             <header>
                 <div className={s.header}>
-                    <h1 className={s.title}>Актуальный курс валют на : <span className={s.span}>{usd === undefined ? ' ' : usd.exchangedate}</span></h1>
+                    <h1 className={s.title}>Актуальный курс валют на: <span className={s.span}>{now}</span></h1>
                     <ul className={s.list}>
                         <li className={s.item}>
-                            <h2 className={s.subTitle}>1 Доллар США равно </h2>
+                            <h2 className={s.subTitle}>1 Доллар США</h2>
                             <p className={s.paragraph}> {usd === undefined ? ' ' : usd.rate.toFixed(2)} UAH</p>
                         </li>
                         <li className={s.item}>
-                            <h2 className={s.subTitle}>1 Евро равно</h2>
-                            <p className={[s.paragraph, s.test].join(' ')}> {eur === undefined ? ' ' : eur.rate.toFixed(2)} UAH</p>
+                            <h2 className={s.subTitle}>1 Евро</h2>
+                            <p className={s.paragraph}> {eur === undefined ? ' ' : eur.rate.toFixed(2)} UAH</p>
                         </li>
                     </ul>
                 </div>
