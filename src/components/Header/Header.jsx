@@ -11,15 +11,13 @@ export const Header = () => {
           .catch(error => console.log(error.message));
       }, []);
 
-      let time = new Date()
-      let now = time.toLocaleDateString('en-US')
-      console.log(now)
+      let time = new Date().toLocaleDateString()
       const usd = exchangeRates.find(option => option.cc === 'USD')
       const eur = exchangeRates.find(option => option.cc === 'EUR')
         return(
             <header>
                 <div className={s.header}>
-                    <h1 className={s.title}>Актуальный курс валют на: <span className={s.span}>{now}</span></h1>
+                    <h1 className={s.title}>Актуальный курс валют на: <span className={s.span}>{time}</span></h1>
                     <ul className={s.list}>
                         <li className={s.item}>
                             <h2 className={s.subTitle}>1 Доллар США</h2>
